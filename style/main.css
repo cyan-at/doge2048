@@ -179,6 +179,13 @@ h1.title {
     margin-left:-32px;
     margin-bottom:10px;}
     
+  .key-container {
+    position: relative;
+    cursor:pointer;
+    left:50%;
+    margin-left:-32px;
+    margin-bottom:10px;}
+    
     .shout-out-container{
       text-align:center;
     }
@@ -200,7 +207,6 @@ h1.title {
   }
     
   .info-container, .hide-info {
-    display: inline-block;
     background: #f0f;
     padding: 10px 15px;
     height: 10px;
@@ -219,7 +225,47 @@ h1.title {
   .game-container .info {
     display: none;
     position: absolute;
-    overflow: scroll;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    z-index: 100;
+    border-radius: 6px;
+    text-align: center;
+/*    -webkit-animation: fade-in 800ms ease;
+    -moz-animation: fade-in 800ms ease;
+    animation: fade-in 800ms ease;*/
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+    .game-container .info p {
+      position:relative;
+      font-size: 16px;
+      padding:10px 20px 10px 20px;
+      font-weight: bold;}
+      
+      
+  .key-container, .hide-key {
+    background: #f0f;
+    padding: 10px 15px;
+    height: 10px;
+    line-height: 10px;
+    font-size:10px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    width: 36px;
+    text-align: center; }
+      .key-container a, .hide-key a{
+        color:#fff;
+        text-decoration:none;}
+    
+  .game-container .key {
+    display: none;
+    position: absolute;
+    overflow-y: scroll;
     top: 0;
     right: 0;
     bottom: 0;
@@ -582,6 +628,7 @@ hr {
       .tile.tile-super .tile-inner {
         font-size: 10px; } }
 
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -882,33 +929,33 @@ hr {
     transform: translate(202px, 202px); }
 
     .tile.tile-2 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-wink-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-wink-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
     .tile.tile-4 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-shake-space-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-shake-space-114.gif');
       background-size: cover;    
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
     .tile.tile-8 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-peepers-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-peepers-114.gif');
       background-size: cover;}
     
     .tile.tile-16 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-prizza-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-prizza-114.gif');
       background-size: cover;}
     
     .tile.tile-32 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-hat-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-hat-114.gif');
       background-size: cover;}
     
     .tile.tile-64 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-gradient-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-gradient-114.gif');
       background-size: cover;}
     
     .tile.tile-128 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-fat-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-fat-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
       font-size: 45px; }
@@ -917,7 +964,7 @@ hr {
           font-size: 25px; } }
     .tile.tile-256 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-rainbow-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-rainbow-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
       font-size: 45px; }
@@ -926,7 +973,7 @@ hr {
           font-size: 25px; } }
     .tile.tile-512 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-sunglasses-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-sunglasses-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
       font-size: 45px; }
@@ -934,7 +981,7 @@ hr {
         .tile.tile-512 .tile-inner {
           font-size: 25px; } }
     .tile.tile-1024 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-derp-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-derp-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
       font-size: 35px; }
@@ -943,7 +990,7 @@ hr {
           font-size: 15px; } }
     .tile.tile-2048 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-shake-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-shake-114.gif');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
       font-size: 35px; }
@@ -952,7 +999,7 @@ hr {
           font-size: 15px; } }
     .tile.tile-super .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-derp-114.gif');
+      background: #f0f url('https://raw.githubusercontent.com/MDJorge/doge2048/master/img/114/doge-derp-114.gif');
       background-size: cover;    
       font-size: 30px; }
       @media screen and (max-width: 480px) {
