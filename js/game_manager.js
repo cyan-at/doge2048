@@ -11,6 +11,8 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
   this.inputManager.on("showInfo", this.showInfo.bind(this));  
   this.inputManager.on("hideInfo", this.hideInfo.bind(this));    
+  this.inputManager.on("showKey", this.showKey.bind(this));  
+  this.inputManager.on("hideKey", this.hideKey.bind(this));    
 
   this.setup();
 }
@@ -34,6 +36,15 @@ GameManager.prototype.showInfo = function () {
 
 GameManager.prototype.hideInfo = function () {
   this.actuator.hideInfo();
+};
+
+GameManager.prototype.showKey = function () {
+  this.actuator.showKey();
+};
+
+
+GameManager.prototype.hideKey = function () {
+  this.actuator.hideKey();
 };
 
 GameManager.prototype.isGameTerminated = function () {
