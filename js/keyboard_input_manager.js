@@ -65,6 +65,10 @@ KeyboardInputManager.prototype.listen = function () {
   showInfo.addEventListener("click", this.showInfo.bind(this));
   showInfo.addEventListener("touchend", this.showInfo.bind(this));
   
+  var showKey = document.querySelector(".key-container");
+  showKey.addEventListener("click", this.showKey.bind(this));
+  showKey.addEventListener("touchend", this.showKey.bind(this));
+  
   // var hideInfo = document.querySelector(".hide-info");
   // hideInfo.addEventListener("click", this.hideInfo.bind(this));
   // hideInfo.addEventListener("touchend", this.hideInfo.bind(this));
@@ -120,4 +124,15 @@ KeyboardInputManager.prototype.showInfo = function (event) {
 KeyboardInputManager.prototype.hideInfo = function (event) {
   event.preventDefault();
   this.emit("hideInfo");
+};
+
+
+KeyboardInputManager.prototype.showKey = function (event) {
+  event.preventDefault();
+  this.emit("showKey");
+};
+
+KeyboardInputManager.prototype.hideKey = function (event) {
+  event.preventDefault();
+  this.emit("hideKey");
 };
