@@ -4,6 +4,7 @@ function HTMLActuator() {
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
   this.info             = document.querySelector(".info");  
+  this.key             = document.querySelector(".key");  
   this.dogeSays = document.querySelector(".doge-says");
   this.adSpace = document.querySelector(".shout-out");
 
@@ -13,11 +14,6 @@ function HTMLActuator() {
 var dogeSayings = ['such good', 'so amaze', 'many points', 'very unstoppable', 'great jorb', 'such playing', 'very good', 'points', 'very gaming', 'such player', 'concern' ,'bewildered',
 'many game', 'so good', 'very scores', 'so scoring', 'so hot right now', 'such playing', 'such matching', 'so matched', 'very matched', 'very neat' ,'such natural',]
 
-var ads = [
-
-  '<a href="https://itunes.apple.com/us/app/snack-compass/id646138186?mt=8&ign-mpt=uo%3D4" target="_blank">Like Pizza?</a>',
-  '<a href="http://maxhash.com/doge" target="_blank">Check out everything hashtagged Doge!</a>',
-]
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
@@ -177,5 +173,20 @@ HTMLActuator.prototype.showInfo = function () {
 
 
 HTMLActuator.prototype.hideInfo = function () {
-    this.info.setAttribute('style','display:none;')
+    this.key.setAttribute('style','display:none;')
+}
+
+HTMLActuator.prototype.showKey = function () {
+  if ( this.key.getAttribute('style') === "display:block;"){
+    this.key.setAttribute('style','display:none;')
+    document.querySelector('.show-key').innerHTML = 'BLOCKS';
+  } else {
+    this.key.setAttribute('style','display:block;') 
+    document.querySelector('.show-key').innerHTML = 'CLOSE';
+  }
+}
+
+
+HTMLActuator.prototype.hideKey = function () {
+    this.key.setAttribute('style','display:none;')
 }
