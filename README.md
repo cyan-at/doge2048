@@ -1,9 +1,11 @@
-# Doge2048
-Just a couple of minor tweakts to Gabriele Cirulli's code base [here](https://github.com/gabrielecirulli/2048)
+# [Doge2048](http://mdjorge.github.io/doge2048/)
 
-Made just for fun. [Play it here!](http://doge2048.com)
+Made just for fun. [Play it here!](http://mdjorge.github.io/doge2048/)
 
+Play [normal version here!](http://mdjorge.github.io/2048/)
 
-## License
-Doge2048 is licensed under the [MIT license.](https://github.com/laferrera/doge2048/blob/master/LICENSE.txt)
+Play [9007199254740992?] (http://www.csie.ntu.edu.tw/%7Eb01902112/9007199254740992/)
 
+Official base code [here](https://github.com/gabrielecirulli/2048)
+
+Doge 2048 base code [can be found here](https://github.com/laferrera/doge2048)
